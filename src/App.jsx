@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Game1 from './game/Game1';
 
 // Import Icon dari react-icons
 import {
@@ -23,6 +24,7 @@ import Materi2 from "./components/materi/Materi2.jsx";
 
 // Import Image untuk memanggil gambar
 import Image from "./assets/Image.jsx";
+import Game2 from "./game/Game2.jsx";
 
 const content = [
   {
@@ -112,6 +114,8 @@ function App() {
         </div>
       </div>
 
+      
+
       {/* Container Untuk Materi 1 */}
       <div className="container container-content">
         <h1 className="judulContent">Materi 1</h1>
@@ -124,6 +128,22 @@ function App() {
         <h1 className="judulContent">Materi 2</h1>
         <CardBackground>
           <Materi2 />
+        </CardBackground>
+      </div>
+
+       {/* Tambahkan Komponen Game1 */}
+       <div className="container container-content">
+        <h1 className="judulContent">Game 1</h1>
+        <CardBackground>
+          <Game1 />
+        </CardBackground>
+      </div>
+      
+       {/* Tambahkan Komponen Game2 */}
+       <div className="container container-content">
+        <h1 className="judulContent">Game 2</h1>
+        <CardBackground>
+          <Game2 />
         </CardBackground>
       </div>
     </>
