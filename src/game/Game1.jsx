@@ -49,13 +49,16 @@ const Game1 = () => {
     } else {
       toast.success('Congratulation! Anda Menang');
       setGameOver(true);
+      setAttempts(4);
+      return;
     }
-
     setAttempts((prevAttempts) => prevAttempts + 1);
+
 
     if (attempts === 3) {
       toast.error('Game Over');
       setGameOver(true);
+      
     }
   };
 
@@ -83,10 +86,12 @@ const Game1 = () => {
               className="form-control"
               />
               <p className="mt-4">Nilai Aslinya adalah {originalValue}</p>
-             <p className="text-start mt-4">Jumlah Tebakan : {attempts}</p>
+              <p className="text-start mt-4">Jumlah Tebakan : {attempts}</p>
+              {!gameOver && (
             <button onClick={handleGuess} className="btn btn-primary">
               Tebak Angka
-            </button>
+                </button>
+            )}
             {gameOver && (
               <button onClick={handleResetGame} className="btn btn-danger">
                 Reset
